@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Tinder: Tropical Rainforest Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #fff;
+            color: #333;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .logo {
+            width: 80px;
+            height: auto;
+        }
+        .app-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #fe3c72;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .tinder-page {
+            display: flex;
+            min-height: calc(100% - 80px);
+        }
+        .profile-section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: white;
+        }
+        .info-section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: #fff0f5;
+        }
+        .profile-photo {
+            width: 100%;
+            height: 50vh;
+            background-image: url('Trop_Rain_Face.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+        }
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .age {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .bio {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #fe3c72;
+            border-bottom: 2px solid #fe3c72;
+            padding-bottom: 10px;
+        }
+        .climatogram {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+            border-radius: 10px;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #FFE4E8; /* Light pink background */
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 0 20px;
+        }
+        .icon:hover {
+            transform: scale(1.1);
+        }
+        .icon-left {
+            background-color: #ff6b6b;
+            color: white;
+        }
+        .icon-right {
+            background-color: #fe3c72;
+            color: white;
+        }
+        .references {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .tinder-page {
+                flex-direction: column;
+            }
+            .profile-section, .info-section {
+                flex: none;
+            }
+        }
+        .heart-emoji {
+            position: fixed;
+            font-size: 24px;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        .alarm {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 0, 0, 0.5);
+            display: none;
+            pointer-events: none;
+        }
+        .match-banner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(254, 60, 114, 0.9);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 36px;
+            font-weight: bold;
+            z-index: 2000;
+            display: none;
+            animation: fadeInOut 5s ease-in-out;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            20%, 80% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Terra_Tinder_Logo.png" alt="Terra Tinder Logo" class="logo">
+        <div class="app-title">Terra Tinder</div>
+        <div style="width: 80px;"></div>
+    </div>
+    <div class="tinder-page">
+        <div class="profile-section">
+            <div class="profile-photo">
+                <div class="profile-info">
+                    <div class="name">Tropical Rainforest</div>
+                    <div class="age">Age: Millions of years</div>
+                    <div class="bio">Canopy with benefits – let's take this to new heights!</div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>My Best Features</h2>
+                <ul>
+                    <li>Towering canopy reaching up to 50 meters high</li>
+                    <li>Home to over 50% of the world's plant and animal species</li>
+                    <li>Steamy climate that's hot and humid all year round</li>
+                    <li>Exotic flora and fauna you won't find anywhere else</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Where to Find Me</h2>
+                <ul>
+                    <li>Amazon Rainforest - The biggest and most diverse</li>
+                    <li>Congo Basin - Home to gorillas and mysterious okapi</li>
+                    <li>Daintree Rainforest - The world's oldest tropical rainforest</li>
+                    <li>Sundarbans - Where tigers roam in mangrove swamps</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="section">
+                <h2>Why I'm Unique</h2>
+                <p>I'm the life of the party in the ecosystem world! I've got more layers than an onion, more diversity than a big city, and I keep it lush and green all year long. No seasonal mood swings here - just constant, vibrant energy!</p>
+            </div>
+            <div class="section">
+                <h2>What I Bring to the Table</h2>
+                <ul>
+                    <li>I'm a climate control expert, keeping Earth's temperature just right</li>
+                    <li>Carbon storage champion - I've got a place for 25% of Earth's carbon</li>
+                    <li>I make it rain... literally! I create my own weather</li>
+                    <li>My roots run deep - great at preventing erosion</li>
+                    <li>I'm basically nature's pharmacy, full of medicinal plants</li>
+                </ul>
+                <p>I'm not just a pretty face – I'm Earth's lungs and medicine cabinet rolled into one!</p>
+            </div>
+            <div class="section">
+                <h2>My Baggage</h2>
+                <ul>
+                    <li>Dealing with some cutting issues (deforestation)</li>
+                    <li>Climate change is really cramping my style</li>
+                    <li>Some of my residents are being poached - not cool</li>
+                    <li>Oil and mining companies keep trying to dig up my past</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>My Self-Improvement Journey</h2>
+                <ul>
+                    <li>Working on setting boundaries (more protected areas)</li>
+                    <li>Learning to balance others' needs with my own</li>
+                    <li>Empowering my local community</li>
+                    <li>Trying this new REDD+ diet to reduce emissions</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>My Stats</h2>
+                <img src="Trop_Rain_Climatogram.png" alt="Tropical Rainforest Climatogram" class="climatogram">
+            </div>
+        </div>
+    </div>
+    <div class="icon-row">
+        <div class="icon icon-left" onclick="swipe('left')">✖️</div>
+        <div class="icon icon-right" onclick="swipe('right')">💚</div>
+    </div>
+    <div class="alarm"></div>
+    <div class="match-banner">It's a Match!</div>
+    <p class="references">Data Sources: Malhi, Y. et al. (2014), Butler, R. A. (2020), WWF (2021)</p>
+
+    <script>
+        function swipe(direction) {
+            if (direction === 'right') {
+                showHeartShower();
+                showMatchBanner();
+            } else {
+                showAlarm();
+            }
+        }
+
+        function showHeartShower() {
+            const duration = 5000; // 5 seconds
+            const heartCount = 50;
+            const interval = duration / heartCount;
+
+            let i = 0;
+            const timer = setInterval(() => {
+                if (i >= heartCount) {
+                    clearInterval(timer);
+                    return;
+                }
+                createHeart();
+                i++;
+            }, interval);
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '💚';
+            heart.classList.add('heart-emoji');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '-50px';
+            document.body.appendChild(heart);
+
+            const animationDuration = Math.random() * 2000 + 3000; // 3-5 seconds
+            const fallDistance = window.innerHeight + 100; // Ensure hearts fall past the bottom of the screen
+
+            const animation = heart.animate([
+                { transform: 'translateY(0) rotate(0deg)' },
+                { transform: `translateY(${fallDistance}px) rotate(${Math.random() * 360}deg)` }
+            ], {
+                duration: animationDuration,
+                easing: 'ease-in',
+            });
+
+            animation.onfinish = () => heart.remove();
+        }
+
+        function showAlarm() {
+            const alarm = document.querySelector('.alarm');
+            alarm.style.display = 'block';
+            setTimeout(() => {
+                alarm.style.display = 'none';
+            }, 2000);
+        }
+
+        function showMatchBanner() {
+            const banner = document.querySelector('.match-banner');
+            banner.style.display = 'block';
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 5000); // 5 seconds duration
+        }
+    </script>
+</body>
+</html>
